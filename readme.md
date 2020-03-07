@@ -4,10 +4,12 @@
 * docker
 * make
 
-## Run it
+## Compile java hello world into native binary
 ```
 make
 ```
+
+then ./target/ contains a binary named "app".
 
 ## License
 [MIT](./license.txt)
