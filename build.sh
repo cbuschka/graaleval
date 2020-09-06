@@ -1,5 +1,9 @@
 #!/bin/bash
 
+trap "exit 1" SIGINT
+trap "exit 1" SIGTERM
+trap "exit 1" SIGHUP
+
 cd /work
 rm -rf /work/target && mkdir -p /work/target/classes
 cd /work/src

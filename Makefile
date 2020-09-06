@@ -1,3 +1,3 @@
 build:
 	docker build -t graaleval:latest .
-	docker run -u $(shell id -u):$(shell id -g) $(shell pwd):/work 
+	docker run --rm --name graaleval -u $(shell id -u):$(shell id -g) -v $(shell pwd):/work graaleval:latest 
