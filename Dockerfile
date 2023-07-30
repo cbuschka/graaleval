@@ -1,7 +1,6 @@
-FROM oracle/graalvm-ce:20.2.0-java11
+FROM ghcr.io/graalvm/native-image:ol8-java17-22.3.3
 
-RUN gu install native-image
+RUN microdnf -y install findutils
 RUN mkdir -p /work
 WORKDIR /work
-ADD / /work/
-CMD /work/build.sh
+ENTRYPOINT [ "/bin/bash", "-x" ]
